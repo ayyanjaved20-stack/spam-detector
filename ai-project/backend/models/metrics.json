@@ -1,0 +1,43 @@
+{
+  "trained": true,
+  "model": "TF-IDF + Logistic Regression",
+  "threshold": 0.6,
+  "rows_total": 4029,
+  "rows_train": 6715,
+  "rows_test": 806,
+  "sources": {
+    "email": 2158,
+    "sms": 1871
+  },
+  "accuracy": 0.835,
+  "spam_precision": 0.9805,
+  "spam_recall": 0.6623,
+  "spam_f1": 0.7906,
+  "ham_precision": 0.7673,
+  "confusion_matrix": {
+    "labels": [
+      "ham",
+      "spam"
+    ],
+    "values": [
+      [
+        422,
+        5
+      ],
+      [
+        128,
+        251
+      ]
+    ]
+  },
+  "per_source": {
+    "email": {
+      "n": 449,
+      "accuracy": 0.7171
+    },
+    "sms": {
+      "n": 357,
+      "accuracy": 0.9832
+    }
+  }
+}

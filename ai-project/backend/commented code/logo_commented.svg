@@ -1,0 +1,20 @@
+<!-- This SVG is pure vector artwork, so it stays sharp at any screen size. -->
+<!-- Each path below is a separate stroke or fill layer of the same small mascot mark. -->
+<!-- Open the scalable vector graphic and declare its namespace, 64 by 64 viewbox and accessible label. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Rajput mark">
+  <!-- Draw the outer star shaped guard outline with a dark stroke and rounded corners. -->
+  <path d="M32 4L39 10L46 7L44 16L54 20L48 27L52 36L44 36L46 52L38 44L32 58L26 44L18 52L20 36L12 36L16 27L10 20L20 16L18 7L25 10L32 4Z" stroke="#16140F" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Draw the smaller inner shield or face outline at the centre of the mark. -->
+  <path d="M24 24L28 20L32 23L36 20L40 24L38 30L32 28L26 30L24 24Z" stroke="#16140F" stroke-width="1.2"/>
+  <!-- Draw the two short diagonal strokes that form the eyes. -->
+  <path d="M27 26L29.5 28.5M37 26L34.5 28.5" stroke="#16140F" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Fill the small central diamond shape with solid dark colour. -->
+  <path d="M32 31L29.5 34L32 36.5L34.5 34L32 31Z" fill="#16140F"/>
+  <!-- Draw the vertical line and small V below the diamond as nose and mouth detail. -->
+  <path d="M32 36.5V40M29 42L32 40L35 42" stroke="#16140F" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Draw the paired horizontal whisker strokes on both sides of the face. -->
+  <path d="M20 33L26 35M20 36.5L26 37M20 40L26 39M44 33L38 35M44 36.5L38 37M44 40L38 39" stroke="#16140F" stroke-width="1" stroke-linecap="round"/>
+  <!-- Draw the two antenna strokes and centre stem above the mark. -->
+  <path d="M22 15L25 21M42 15L39 21M32 13V20" stroke="#16140F" stroke-width="1" stroke-linecap="round"/>
+<!-- Close the SVG document. -->
+</svg>

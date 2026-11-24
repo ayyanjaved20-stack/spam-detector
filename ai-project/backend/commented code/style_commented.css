@@ -1,0 +1,596 @@
+/* Section marker naming the rules that follow. */
+/* Rajput Spam Detector — light-only, three-column dashboard.
+   /* Apply Reference palette + bundled Space Grotesk / JetBrains Mono. */ as part of the root element styling. */
+   Reference palette + bundled Space Grotesk / JetBrains Mono. */
+/* (blank line separates logical blocks) */
+
+/* Apply @font-face { as part of the @font-face styling. */
+@font-face {
+  /* For @font-face, choose the typeface stack to achieve the intended visual treatment. */
+  font-family: "Space Grotesk";
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  src: url("/static/fonts/space-grotesk.woff2") format("woff2");
+  /* For @font-face, set the text style, set the text weight, control font loading fallback to achieve the intended visual treatment. */
+  font-style: normal; font-weight: 300 700; font-display: swap;
+/* Apply } as part of the @font-face styling. */
+}
+/* Apply @font-face { as part of the @font-face styling. */
+@font-face {
+  /* For @font-face, choose the typeface stack to achieve the intended visual treatment. */
+  font-family: "JetBrains Mono";
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  src: url("/static/fonts/jetbrains-mono.woff2") format("woff2");
+  /* For @font-face, set the text style, set the text weight, control font loading fallback to achieve the intended visual treatment. */
+  font-style: normal; font-weight: 300 700; font-display: swap;
+/* Apply } as part of the @font-face styling. */
+}
+/* (blank line separates logical blocks) */
+
+/* For @font-face, set the declared property to achieve the intended visual treatment. */
+:root {
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --bg: #f4f3ef;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --bg-subtle: #ebeae5;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --text: #111111;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --text-secondary: #777777;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --border: #d6d4ce;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --accent: #ff3b30;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --accent-tint: #ff3b300f;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --sans: "Space Grotesk", system-ui, sans-serif;
+  /* For @font-face, set the declared property to achieve the intended visual treatment. */
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+/* Apply } as part of the @font-face styling. */
+}
+/* (blank line separates logical blocks) */
+
+/* For @font-face, set the declared property, add outer spacing, add inner spacing to achieve the intended visual treatment. */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* For @font-face, set the declared property to achieve the intended visual treatment. */
+[hidden] { display: none !important; }
+/* For @font-face, set the declared property to achieve the intended visual treatment. */
+html { scroll-behavior: smooth; }
+/* Apply body { as part of the body styling. */
+body {
+  /* For body, set the minimum height, set the declared property to achieve the intended visual treatment. */
+  min-height: 100vh; overflow-x: hidden;
+  /* For body, set the background, set the text colour to achieve the intended visual treatment. */
+  background: var(--bg); color: var(--text);
+  /* For body, choose the typeface stack, set the text size, set line spacing, set the text weight to achieve the intended visual treatment. */
+  font-family: var(--sans); font-size: 17px; line-height: 1.6; font-weight: 400;
+  /* For body, set the declared property to achieve the intended visual treatment. */
+  -webkit-font-smoothing: antialiased;
+/* Apply } as part of the body styling. */
+}
+/* For body, set the declared property, set the text colour to achieve the intended visual treatment. */
+::selection { background: var(--accent); color: #fff; }
+/* For body, set the declared property, set the text colour to achieve the intended visual treatment. */
+button, textarea { font: inherit; color: inherit; }
+/* For body, set the declared property, set the background, define the border to achieve the intended visual treatment. */
+button { cursor: pointer; background: none; border: 0; }
+/* For body, set the declared property, control underlines to achieve the intended visual treatment. */
+a { color: inherit; text-decoration: none; }
+/* (blank line separates logical blocks) */
+
+/* For body, set the declared property to achieve the intended visual treatment. */
+.grain::before {
+  /* For body, set the declared property, set the positioning mode, set all edge offsets, control stacking order, control hit testing to achieve the intended visual treatment. */
+  content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  /* For body, set transparency, set the declared property, set the declared property to achieve the intended visual treatment. */
+  opacity: .03; background-repeat: repeat; background-size: 180px;
+  /* For body, set the declared property to achieve the intended visual treatment. */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+/* Apply } as part of the body styling. */
+}
+/* (blank line separates logical blocks) */
+
+/* Apply .page { as part of the .page styling. */
+.page {
+  /* For .page, set the positioning mode, control stacking order to achieve the intended visual treatment. */
+  position: relative; z-index: 1;
+  /* For .page, set the declared property, add outer spacing to achieve the intended visual treatment. */
+  max-width: 1360px; margin: 0 auto;
+  /* For .page, add inner spacing to achieve the intended visual treatment. */
+  padding: 32px 52px 38px;
+  /* For .page, choose the layout mode, set the declared property, set the minimum height to achieve the intended visual treatment. */
+  display: flex; flex-direction: column; min-height: 100vh;
+/* Apply } as part of the .page styling. */
+}
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Masthead */
+/* Apply .masthead { as part of the .masthead styling. */
+.masthead {
+  /* For .masthead, choose the layout mode, align items on the cross axis, align items on the main axis, set spacing between children to achieve the intended visual treatment. */
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  /* For .masthead, set the declared property, define the bottom border to achieve the intended visual treatment. */
+  padding-bottom: 20px; border-bottom: 2px solid var(--text);
+/* Apply } as part of the .masthead styling. */
+}
+/* For .masthead, set the declared property, align items on the cross axis, set spacing between children, set the text colour, control underlines to achieve the intended visual treatment. */
+.brand { display: flex; align-items: center; gap: 18px; color: inherit; text-decoration: none; }
+/* For .masthead, set the declared property, set the height, set the declared property, animate property changes to achieve the intended visual treatment. */
+.logo-mark { width: 64px; height: 64px; flex: none; transition: transform .45s; }
+/* For .masthead, set the declared property to achieve the intended visual treatment. */
+.brand:hover .logo-mark { transform: rotate(-6deg); }
+/* For .masthead, set the declared property, set the text weight, tune character spacing, set line spacing, control line wrapping to achieve the intended visual treatment. */
+.brand-name { font-size: 2.5rem; font-weight: 300; letter-spacing: -.04em; line-height: 1; white-space: nowrap; }
+/* For .masthead, set the declared property, set the text colour, set the text style to achieve the intended visual treatment. */
+.brand-name em { font-weight: 300; color: var(--text-secondary); font-style: normal; }
+/* Apply .text-button { as part of the .text-button styling. */
+.text-button {
+  /* For .text-button, choose the typeface stack, set the text size, tune character spacing, control capitalisation to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+  /* For .text-button, define the bottom border, set the declared property, animate property changes to achieve the intended visual treatment. */
+  border-bottom: 1px solid var(--border); padding-bottom: 3px; transition: border-color .2s, color .2s;
+/* Apply } as part of the .text-button styling. */
+}
+/* For .text-button, set the declared property, set the text colour to achieve the intended visual treatment. */
+.text-button:hover { border-color: var(--accent); color: var(--accent); }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Three-column layout */
+/* Apply .layout { as part of the .layout styling. */
+.layout {
+  /* For .layout, set the declared property to achieve the intended visual treatment. */
+  flex: 1;
+  /* For .layout, choose the layout mode to achieve the intended visual treatment. */
+  display: grid;
+  /* For .layout, set the declared property to achieve the intended visual treatment. */
+  grid-template-columns: 210px minmax(340px, 1fr) minmax(380px, 1.06fr);
+  /* For .layout, set spacing between children to achieve the intended visual treatment. */
+  gap: 52px;
+  /* For .layout, add inner spacing to achieve the intended visual treatment. */
+  padding: 42px 0 44px;
+  /* For .layout, align items on the cross axis to achieve the intended visual treatment. */
+  align-items: start;
+/* Apply } as part of the .layout styling. */
+}
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Left rail — model status */
+/* For .layout, set the declared property, set the declared property to achieve the intended visual treatment. */
+.rail { border-right: 1px solid var(--border); padding-right: 32px; }
+/* For .layout, set the declared property, set the declared property to achieve the intended visual treatment. */
+.metric-list { display: flex; flex-direction: column; }
+/* For .layout, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.metric-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
+/* For .layout, set the declared property to achieve the intended visual treatment. */
+.metric-row:first-child { padding-top: 0; }
+/* For .layout, set the declared property to achieve the intended visual treatment. */
+.metric-row .micro-label { display: block; }
+/* Apply .metric-value { as part of the .metric-value styling. */
+.metric-value {
+  /* For .metric-value, choose the layout mode, add top spacing to achieve the intended visual treatment. */
+  display: block; margin-top: 4px;
+  /* For .metric-value, choose the typeface stack, set the text size, tune character spacing to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .92rem; letter-spacing: .04em;
+  /* For .metric-value, control line wrapping, control overflow clipping, set the declared property to achieve the intended visual treatment. */
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+/* Apply } as part of the .metric-value styling. */
+}
+/* For .metric-value, set the declared property, align items on the cross axis, align items on the main axis, set spacing between children, add bottom spacing to achieve the intended visual treatment. */
+.rail-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
+/* Apply .rail-title { as part of the .rail-title styling. */
+.rail-title {
+  /* For .rail-title, choose the typeface stack, set the text size, set the text weight to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .72rem; font-weight: 500;
+  /* For .rail-title, tune character spacing, control capitalisation, set the text colour to achieve the intended visual treatment. */
+  letter-spacing: .18em; text-transform: uppercase; color: var(--text-secondary);
+  /* For .rail-title, add bottom spacing to achieve the intended visual treatment. */
+  margin-bottom: 14px;
+/* Apply } as part of the .rail-title styling. */
+}
+/* For .rail-title, set the declared property to achieve the intended visual treatment. */
+.rail-head .rail-title { margin-bottom: 0; }
+/* For .rail-title, set the declared property, set the text size, tune character spacing, set the text colour, animate property changes to achieve the intended visual treatment. */
+.tiny-button { font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; color: var(--text-secondary); transition: color .2s; }
+/* For .rail-title, set the declared property to achieve the intended visual treatment. */
+.tiny-button:hover { color: var(--accent); }
+/* (blank line separates logical blocks) */
+
+/* Apply .history-list { as part of the .history-list styling. */
+.history-list {
+  /* For .history-list, set the declared property, choose the layout mode, set the declared property, set spacing between children to achieve the intended visual treatment. */
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+  /* For .history-list, set the maximum height, set the declared property to achieve the intended visual treatment. */
+  max-height: 320px; overflow-y: auto;
+  /* For .history-list, set the declared property, set the declared property to achieve the intended visual treatment. */
+  padding-right: 6px; margin-right: -6px;
+  /* For .history-list, set the declared property, set the declared property to achieve the intended visual treatment. */
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+/* Apply } as part of the .history-list styling. */
+}
+/* For .history-list, set the declared property to achieve the intended visual treatment. */
+.history-list::-webkit-scrollbar { width: 6px; }
+/* For .history-list, set the declared property to achieve the intended visual treatment. */
+.history-list::-webkit-scrollbar-thumb { background: var(--border); }
+/* For .history-list, set the declared property to achieve the intended visual treatment. */
+.history-list::-webkit-scrollbar-track { background: transparent; }
+/* Apply .history-btn { as part of the .history-btn styling. */
+.history-btn {
+  /* For .history-btn, choose the layout mode, set the declared property, set spacing between children, align items on the cross axis to achieve the intended visual treatment. */
+  display: grid; grid-template-columns: 40px 1fr; gap: 9px; align-items: start;
+  /* For .history-btn, set the width, add inner spacing, align the text to achieve the intended visual treatment. */
+  width: 100%; padding: 11px 12px; text-align: left;
+  /* For .history-btn, define the border, set the background to achieve the intended visual treatment. */
+  border: 1px solid var(--border); background: var(--bg-subtle);
+  /* For .history-btn, animate property changes to achieve the intended visual treatment. */
+  transition: border-color .2s, background .2s, transform .2s;
+/* Apply } as part of the .history-btn styling. */
+}
+/* For .history-btn, set the declared property, set the background, apply a visual transform to achieve the intended visual treatment. */
+.history-btn:hover { border-color: var(--accent); background: transparent; transform: translateX(3px); }
+/* Apply .mini-badge { as part of the .mini-badge styling. */
+.mini-badge {
+  /* For .mini-badge, choose the typeface stack, set the text size, set the text weight, tune character spacing to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .6rem; font-weight: 500; letter-spacing: .04em;
+  /* For .mini-badge, add inner spacing, define the border, set the text colour to achieve the intended visual treatment. */
+  padding: 3px 5px; border: 1px solid var(--border); color: var(--text-secondary);
+/* Apply } as part of the .mini-badge styling. */
+}
+/* For .mini-badge, set the declared property, set the border colour, set the background to achieve the intended visual treatment. */
+.mini-badge.spam { color: var(--accent); border-color: var(--accent); background: var(--accent-tint); }
+/* For .mini-badge, set the declared property, set the text size, set line spacing, control line wrapping, control overflow clipping, set the declared property, set the text colour to achieve the intended visual treatment. */
+.history-text { display: block; font-size: .82rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
+/* For .mini-badge, set the declared property, add top spacing, choose the typeface stack, set the text size, tune character spacing, set the text colour to achieve the intended visual treatment. */
+.history-time { display: block; margin-top: 4px; font-family: var(--mono); font-size: .62rem; letter-spacing: .04em; color: var(--text-secondary); }
+/* For .mini-badge, set the declared property, choose the typeface stack, set the text size, set the text colour to achieve the intended visual treatment. */
+.rail-muted { margin-top: .5rem; font-family: var(--mono); font-size: .72rem; color: var(--text-secondary); }
+/* For .mini-badge, set the declared property to achieve the intended visual treatment. */
+.history-footer .history-list { max-height: none; }
+/* For .mini-badge, set the declared property, add inner spacing to achieve the intended visual treatment. */
+.history-footer .history-btn { grid-template-columns: 46px 1fr; padding: 12px 14px; }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Column headings */
+/* For .mini-badge, set the declared property, align items on the cross axis to achieve the intended visual treatment. */
+.section-head { display: flex; align-items: baseline; }
+/* Apply .section-head h1, .section-head h2 { as part of the .section-head h1, .section-head h2 styling. */
+.section-head h1, .section-head h2 {
+  /* For .section-head h1, .section-head h2, set the text size, set the text weight, tune character spacing, set line spacing to achieve the intended visual treatment. */
+  font-size: 2.5rem; font-weight: 300; letter-spacing: -.04em; line-height: 1.1;
+/* Apply } as part of the .section-head h1, .section-head h2 styling. */
+}
+/* For .section-head h1, .section-head h2, set the declared property, set the text size, set the text colour, set the declared property to achieve the intended visual treatment. */
+.section-lede { margin-top: 12px; font-size: 1rem; color: var(--text-secondary); max-width: 42ch; }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Input column */
+/* For .section-head h1, .section-head h2, set the declared property, set spacing between children, add top spacing, define the bottom border to achieve the intended visual treatment. */
+.tabs { display: flex; gap: 2rem; margin-top: 2rem; border-bottom: 1px solid var(--border); }
+/* Apply .tab { as part of the .tab styling. */
+.tab {
+  /* For .tab, set the positioning mode, add inner spacing to achieve the intended visual treatment. */
+  position: relative; padding: 0 0 .8rem;
+  /* For .tab, choose the typeface stack, set the text size, tune character spacing, control capitalisation to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+  /* For .tab, set the text colour to achieve the intended visual treatment. */
+  color: var(--text-secondary);
+/* Apply } as part of the .tab styling. */
+}
+/* For .tab, set the declared property to achieve the intended visual treatment. */
+.tab::after {
+  /* For .tab, set the declared property, set the positioning mode, set the declared property, set the declared property, set the declared property, set the height to achieve the intended visual treatment. */
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  /* For .tab, set the background, apply a visual transform, set the declared property, animate property changes to achieve the intended visual treatment. */
+  background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s;
+/* Apply } as part of the .tab styling. */
+}
+/* For .tab, set the declared property to achieve the intended visual treatment. */
+.tab:hover, .tab.active { color: var(--text); }
+/* For .tab, set the declared property to achieve the intended visual treatment. */
+.tab.active::after { transform: scaleX(1); }
+/* For .tab, set the declared property, add top spacing to achieve the intended visual treatment. */
+.textarea-wrap { position: relative; margin-top: 1.5rem; }
+/* Apply textarea { as part of the textarea styling. */
+textarea {
+  /* For textarea, choose the layout mode, set the width, set the minimum height, set the declared property to achieve the intended visual treatment. */
+  display: block; width: 100%; min-height: 290px; resize: vertical;
+  /* For textarea, add inner spacing, set the background, define the border, define the bottom border to achieve the intended visual treatment. */
+  padding: .5rem 0 1rem; background: transparent; border: 0; border-bottom: 1px solid var(--border);
+  /* For textarea, choose the typeface stack, set the text size, set the text weight, set line spacing to achieve the intended visual treatment. */
+  font-family: var(--sans); font-size: 1.15rem; font-weight: 300; line-height: 1.7;
+  /* For textarea, set the declared property, animate property changes to achieve the intended visual treatment. */
+  outline: none; transition: border-color .2s;
+/* Apply } as part of the textarea styling. */
+}
+/* For textarea, set the declared property to achieve the intended visual treatment. */
+textarea::placeholder { color: var(--text-secondary); }
+/* For textarea, set the declared property to achieve the intended visual treatment. */
+textarea:focus { border-color: var(--text); }
+/* Apply .drop-hint { as part of the .drop-hint styling. */
+.drop-hint {
+  /* For .drop-hint, set the positioning mode, set all edge offsets, choose the layout mode, set the declared property to achieve the intended visual treatment. */
+  position: absolute; inset: 0; display: grid; place-items: center;
+  /* For .drop-hint, define the border, set the background to achieve the intended visual treatment. */
+  border: 1px dashed var(--text); background: var(--bg-subtle);
+  /* For .drop-hint, choose the typeface stack, set the text size, tune character spacing to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .12em;
+  /* For .drop-hint, set transparency, control hit testing, animate property changes to achieve the intended visual treatment. */
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+/* Apply } as part of the .drop-hint styling. */
+}
+/* For .drop-hint, set the declared property to achieve the intended visual treatment. */
+.textarea-wrap.dragging .drop-hint { opacity: 1; }
+/* Apply .input-meta { as part of the .input-meta styling. */
+.input-meta {
+  /* For .input-meta, choose the layout mode, align items on the cross axis, align items on the main axis, add top spacing to achieve the intended visual treatment. */
+  display: flex; align-items: center; justify-content: space-between; margin-top: 12px;
+  /* For .input-meta, choose the typeface stack, set the text size, tune character spacing, control capitalisation to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  /* For .input-meta, set the text colour to achieve the intended visual treatment. */
+  color: var(--text-secondary);
+/* Apply } as part of the .input-meta styling. */
+}
+/* Apply .scan-button { as part of the .scan-button styling. */
+.scan-button {
+  /* For .scan-button, choose the layout mode, align items on the cross axis, align items on the main axis to achieve the intended visual treatment. */
+  display: flex; align-items: center; justify-content: space-between;
+  /* For .scan-button, set the width, add top spacing, add inner spacing to achieve the intended visual treatment. */
+  width: 100%; margin-top: 2rem; padding: 16px 20px;
+  /* For .scan-button, define the border, set the background, set the text colour to achieve the intended visual treatment. */
+  border: 1px solid var(--text); background: var(--text); color: var(--bg);
+  /* For .scan-button, choose the typeface stack, set the text size, tune character spacing, control capitalisation to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .82rem; letter-spacing: .2em; text-transform: uppercase;
+  /* For .scan-button, animate property changes to achieve the intended visual treatment. */
+  transition: background .25s, color .25s, border-color .25s;
+/* Apply } as part of the .scan-button styling. */
+}
+/* For .scan-button, set the declared property, set the text colour, set the border colour to achieve the intended visual treatment. */
+.scan-button:hover { background: transparent; color: var(--text); border-color: var(--accent); }
+/* For .scan-button, set the declared property, set the mouse cursor to achieve the intended visual treatment. */
+.scan-button:disabled { opacity: .55; cursor: wait; }
+/* For .scan-button, set the declared property, set the text size, animate property changes to achieve the intended visual treatment. */
+.scan-arrow { font-family: var(--sans); font-size: 1.2rem; transition: transform .2s; }
+/* For .scan-button, set the declared property to achieve the intended visual treatment. */
+.scan-button:hover .scan-arrow { transform: translate(3px, -3px); }
+/* For .scan-button, set the declared property, add inner spacing, set the declared property, set the background, set the text colour, choose the typeface stack, set the text size to achieve the intended visual treatment. */
+.error { margin-top: 1rem; padding: .8rem 1rem; border-left: 2px solid var(--accent); background: var(--accent-tint); color: var(--accent); font-family: var(--mono); font-size: .78rem; }
+/* For .scan-button, set the declared property, choose the typeface stack, set the text size, tune character spacing, set the text colour to achieve the intended visual treatment. */
+.input-footnote { margin-top: 14px; font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; color: var(--text-secondary); }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Result column */
+/* For .scan-button, set the declared property, add inner spacing, align the text to achieve the intended visual treatment. */
+.empty-state { margin-top: 2rem; padding: 4rem 1rem; text-align: center; }
+/* For .scan-button, set the declared property, set the text size, set line spacing, set the text colour, add bottom spacing to achieve the intended visual treatment. */
+.empty-glyph { font-family: var(--mono); font-size: 3.5rem; line-height: 1; color: var(--border); margin-bottom: 1rem; }
+/* For .scan-button, set the declared property, set the text size, tune character spacing, set the text colour to achieve the intended visual treatment. */
+.empty-title { font-family: var(--mono); font-size: .78rem; letter-spacing: .24em; color: var(--text-secondary); }
+/* For .scan-button, set the declared property, set the text size, set the text colour to achieve the intended visual treatment. */
+.empty-sub { margin-top: .8rem; font-size: 1rem; color: var(--text-secondary); }
+/* For .scan-button, set the declared property to achieve the intended visual treatment. */
+.scanning { margin-top: 2rem; }
+/* Apply .scan-step { as part of the .scan-step styling. */
+.scan-step {
+  /* For .scan-step, add inner spacing, define the bottom border to achieve the intended visual treatment. */
+  padding: .9rem 0; border-bottom: 1px solid var(--border);
+  /* For .scan-step, choose the typeface stack, set the text size, tune character spacing to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .76rem; letter-spacing: .12em;
+  /* For .scan-step, set the text colour, set transparency, animate property changes to achieve the intended visual treatment. */
+  color: var(--text-secondary); opacity: .4; transition: .3s;
+/* Apply } as part of the .scan-step styling. */
+}
+/* For .scan-step, set the declared property, set transparency, set the declared property to achieve the intended visual treatment. */
+.scan-step.active { color: var(--accent); opacity: 1; padding-left: .5rem; }
+/* For .scan-step, set the declared property to achieve the intended visual treatment. */
+.scan-step.done { opacity: .75; }
+/* For .scan-step, set the declared property, apply keyframes to achieve the intended visual treatment. */
+.result { margin-top: 2rem; animation: reveal .45s ease-out both; }
+/* For .scan-step, set the declared property, align items on the cross axis, align items on the main axis, set spacing between children, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.verdict-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 1.5rem; border-bottom: 2px solid var(--text); }
+/* For .scan-step, set the declared property, choose the typeface stack, set the text size, tune character spacing, control capitalisation, set the text colour to achieve the intended visual treatment. */
+.micro-label { display: block; font-family: var(--mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--text-secondary); }
+/* For .scan-step, set the declared property, set the text size, set the text weight, set line spacing, tune character spacing to achieve the intended visual treatment. */
+.verdict { margin-top: 4px; font-size: clamp(3.6rem, 7vw, 5.5rem); font-weight: 300; line-height: .95; letter-spacing: -.055em; }
+/* For .scan-step, set the declared property to achieve the intended visual treatment. */
+.verdict.spam, .score.spam { color: var(--accent); }
+/* For .scan-step, set the declared property to achieve the intended visual treatment. */
+.score-block { text-align: right; }
+/* For .scan-step, set the declared property, set the text size, set the text weight, set line spacing, tune character spacing, set the declared property to achieve the intended visual treatment. */
+.score { margin-top: 4px; font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 300; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+/* (blank line separates logical blocks) */
+
+/* For .scan-step, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.meter-block { padding: 1.8rem 0 1.5rem; border-bottom: 1px solid var(--border); }
+/* For .scan-step, set the declared property, align items on the main axis, set spacing between children, choose the typeface stack, set the text size, tune character spacing, control capitalisation, set the text colour to achieve the intended visual treatment. */
+.meter-head { display: flex; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-secondary); }
+/* For .scan-step, set the declared property, set the height, add top spacing, define the border, set the background to achieve the intended visual treatment. */
+.meter { position: relative; height: 20px; margin-top: 1.9rem; border: 1px solid var(--border); background: var(--bg-subtle); }
+/* For .scan-step, set the declared property, set the declared property, set the declared property, set the declared property, set the background to achieve the intended visual treatment. */
+.meter-danger { position: absolute; top: 0; right: 0; bottom: 0; background: repeating-linear-gradient(45deg, var(--accent-tint) 0 5px, transparent 5px 10px); }
+/* For .scan-step, set the declared property, set the declared property, set the declared property, set the declared property, set the width, set the background, animate property changes to achieve the intended visual treatment. */
+.meter-fill { position: absolute; top: 0; left: 0; bottom: 0; width: 0; background: var(--text); transition: width .7s cubic-bezier(.2,.8,.2,1); }
+/* For .scan-step, set the declared property to achieve the intended visual treatment. */
+.meter-fill.spam { background: var(--accent); }
+/* For .scan-step, set the declared property, set the declared property, set the declared property, set the width, set the background to achieve the intended visual treatment. */
+.meter-threshold { position: absolute; top: -6px; bottom: -6px; width: 2px; background: var(--text); }
+/* Apply .meter-threshold span { as part of the .meter-threshold span styling. */
+.meter-threshold span {
+  /* For .meter-threshold span, set the positioning mode, set the declared property, set the declared property, apply a visual transform to achieve the intended visual treatment. */
+  position: absolute; top: -24px; left: 50%; transform: translateX(-50%);
+  /* For .meter-threshold span, choose the typeface stack, set the text size, set the text colour, control line wrapping to achieve the intended visual treatment. */
+  font-family: var(--mono); font-size: .72rem; color: var(--text); white-space: nowrap;
+/* Apply } as part of the .meter-threshold span styling. */
+}
+/* For .meter-threshold span, set the declared property, align items on the main axis, add top spacing, choose the typeface stack, set the text size, set the text colour to achieve the intended visual treatment. */
+.meter-scale { display: flex; justify-content: space-between; margin-top: .9rem; font-family: var(--mono); font-size: .68rem; color: var(--text-secondary); }
+/* (blank line separates logical blocks) */
+
+/* For .meter-threshold span, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.signals { padding: 1.6rem 0 1.2rem; border-bottom: 1px solid var(--border); }
+/* For .meter-threshold span, set the declared property, align items on the cross axis, align items on the main axis, set spacing between children, add bottom spacing to achieve the intended visual treatment. */
+.signals-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 1rem; }
+/* For .meter-threshold span, set the declared property, set the text size, tune character spacing, set the text weight, control capitalisation to achieve the intended visual treatment. */
+.signals h3 { font-family: var(--mono); font-size: .78rem; letter-spacing: .16em; font-weight: 400; text-transform: uppercase; }
+/* For .meter-threshold span, set the declared property, set the text size, set the text colour to achieve the intended visual treatment. */
+.signals-head span { font-family: var(--mono); font-size: .7rem; color: var(--text-secondary); }
+/* For .meter-threshold span, set the declared property, set the declared property, set spacing between children, set the minimum height to achieve the intended visual treatment. */
+.chips { display: flex; flex-wrap: wrap; gap: .6rem; min-height: 40px; }
+/* For .meter-threshold span, set the declared property, set the text size, add inner spacing, define the border, set the background, set the text colour to achieve the intended visual treatment. */
+.chip { font-family: var(--mono); font-size: .9rem; padding: .5rem .75rem; border: 1px solid var(--border); background: var(--bg-subtle); color: var(--text); }
+/* For .meter-threshold span, set the declared property, set the border colour, set the background to achieve the intended visual treatment. */
+.chip.pos { color: var(--accent); border-color: var(--accent); background: var(--accent-tint); }
+/* For .meter-threshold span, set the declared property, set the declared property to achieve the intended visual treatment. */
+.chip.neg { color: var(--text-secondary); border-style: dashed; }
+/* For .meter-threshold span, set the declared property, set the text size, set line spacing, set the text colour to achieve the intended visual treatment. */
+.tip { margin-top: 1.5rem; font-size: .95rem; line-height: 1.7; color: var(--text-secondary); }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Recent scans footer */
+/* For .meter-threshold span, set the declared property, set the declared property to achieve the intended visual treatment. */
+.history-footer { border-top: 2px solid var(--text); padding-top: 18px; }
+/* (blank line separates logical blocks) */
+
+/* Section marker naming the rules that follow. */
+/* Model card drawer */
+/* For .meter-threshold span, set the declared property, set all edge offsets, control stacking order, set the background to achieve the intended visual treatment. */
+.drawer-backdrop { position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.42); }
+/* For .meter-threshold span, set the declared property to achieve the intended visual treatment. */
+body.drawer-open { overflow: hidden; }
+/* Apply .drawer { as part of the .drawer styling. */
+.drawer {
+  /* For .drawer, set the positioning mode, set the declared property, set the declared property, set the declared property, control stacking order to achieve the intended visual treatment. */
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 50;
+  /* For .drawer, set the width, set the declared property to achieve the intended visual treatment. */
+  width: min(620px, 100%); overflow-y: auto;
+  /* For .drawer, set the background, set the declared property to achieve the intended visual treatment. */
+  background: var(--bg); border-left: 1px solid var(--border);
+  /* For .drawer, add inner spacing, apply keyframes to achieve the intended visual treatment. */
+  padding: 2.5rem 3rem 4rem; animation: slide-in .35s cubic-bezier(.2,.8,.2,1) both;
+/* Apply } as part of the .drawer styling. */
+}
+/* For .drawer, set the declared property, align items on the cross axis, align items on the main axis, set spacing between children, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.drawer-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--text); }
+/* For .drawer, set the declared property, set the text weight, tune character spacing to achieve the intended visual treatment. */
+.drawer-head h2 { font-size: 2.2rem; font-weight: 300; letter-spacing: -.04em; }
+/* For .drawer, set the declared property, set the height, choose the layout mode, set the declared property, set the declared property, define the border, set the text size, animate property changes to achieve the intended visual treatment. */
+.drawer-close { width: 40px; height: 40px; display: grid; place-items: center; flex: none; border: 1px solid var(--border); font-size: 1.5rem; transition: .2s; }
+/* For .drawer, set the declared property, set the text colour to achieve the intended visual treatment. */
+.drawer-close:hover { border-color: var(--accent); color: var(--accent); }
+/* For .drawer, set the declared property, define the bottom border to achieve the intended visual treatment. */
+.drawer-section { padding: 1.8rem 0; border-bottom: 1px solid var(--border); }
+/* For .drawer, set the declared property, align items on the main axis, set spacing between children, choose the typeface stack, set the text size, tune character spacing, set the text weight, control capitalisation, set the text colour, add bottom spacing to achieve the intended visual treatment. */
+.drawer-section h3 { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--mono); font-size: .78rem; letter-spacing: .12em; font-weight: 400; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.drawer-section h3 small { font-size: .68rem; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.pipeline { list-style: none; }
+/* For .drawer, set the declared property, set the declared property, set spacing between children, add inner spacing, define the bottom border to achieve the intended visual treatment. */
+.pipeline li { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--border); }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.pipeline li:last-child { border-bottom: 0; }
+/* For .drawer, set the declared property, set the text size, set the text colour to achieve the intended visual treatment. */
+.pipeline li > span { font-family: var(--mono); font-size: .75rem; color: var(--text-secondary); }
+/* For .drawer, set the declared property, set the text size, tune character spacing, set the text weight to achieve the intended visual treatment. */
+.pipeline strong { font-family: var(--mono); font-size: .78rem; letter-spacing: .1em; font-weight: 500; }
+/* For .drawer, set the declared property, set the text size, set the text colour to achieve the intended visual treatment. */
+.pipeline p { margin-top: .2rem; font-size: .95rem; color: var(--text-secondary); }
+/* For .drawer, set the declared property, set the declared property, set spacing between children, choose the typeface stack, set the text size to achieve the intended visual treatment. */
+.matrix { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 3px; font-family: var(--mono); font-size: .72rem; }
+/* For .drawer, set the declared property, set the declared property, set the minimum height, add inner spacing, define the border, align the text to achieve the intended visual treatment. */
+.matrix-cell { display: grid; place-items: center; min-height: 52px; padding: .5rem; border: 1px solid var(--border); text-align: center; }
+/* For .drawer, set the declared property, tune character spacing to achieve the intended visual treatment. */
+.matrix-head, .matrix-rowhead { color: var(--text-secondary); letter-spacing: .08em; }
+/* For .drawer, set the declared property, set the background to achieve the intended visual treatment. */
+.matrix-value { font-size: 1.1rem; background: rgba(17,17,17,var(--heat,.05)); }
+/* For .drawer, set the declared property, set the background to achieve the intended visual treatment. */
+.matrix-value.miss { color: var(--accent); background: rgba(255,59,48,calc(var(--heat,.05) * .8)); }
+/* For .drawer, set the declared property, set the declared property, set spacing between children to achieve the intended visual treatment. */
+.source-bars { display: flex; flex-direction: column; gap: 1rem; }
+/* For .drawer, set the declared property, align items on the main axis, choose the typeface stack, set the text size, set the text colour, add bottom spacing to achieve the intended visual treatment. */
+.source-row-head { display: flex; justify-content: space-between; font-family: var(--mono); font-size: .75rem; color: var(--text-secondary); margin-bottom: .4rem; }
+/* For .drawer, set the declared property, set the background to achieve the intended visual treatment. */
+.source-track { height: 8px; background: var(--border); }
+/* For .drawer, set the declared property, set the background to achieve the intended visual treatment. */
+.source-fill { height: 100%; background: var(--text); }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.sources-list { list-style: none; }
+/* For .drawer, set the declared property, define the bottom border, set the text size to achieve the intended visual treatment. */
+.sources-list li { padding: .7rem 0; border-bottom: 1px solid var(--border); font-size: .95rem; }
+/* For .drawer, set the declared property, choose the typeface stack, set the text size, set the text colour to achieve the intended visual treatment. */
+.sources-list li span { display: block; font-family: var(--mono); font-size: .68rem; color: var(--text-secondary); }
+/* For .drawer, set the declared property, set the text size, set the text colour, set line spacing to achieve the intended visual treatment. */
+.drawer-note { margin-top: 1rem; font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+/* (blank line separates logical blocks) */
+
+/* For .drawer, set the declared property, set the width, set the height, control overflow clipping, set the declared property, control line wrapping to achieve the intended visual treatment. */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+/* For .drawer, set the declared property, set the declared property to achieve the intended visual treatment. */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+/* (blank line separates logical blocks) */
+
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.masthead { animation: reveal .6s both; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.rail { animation: reveal .6s .12s both; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.input-column { animation: reveal .6s .2s both; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.result-column { animation: reveal .6s .28s both; }
+/* For .drawer, set the declared property to achieve the intended visual treatment. */
+.history-footer { animation: reveal .6s .36s both; }
+/* Define the named animation steps used by the page. */
+@keyframes reveal { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: none; } }
+/* Define the named animation steps used by the page. */
+@keyframes slide-in { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+/* (blank line separates logical blocks) */
+
+/* Apply the following rules only when (max-width: 1180px)  matches. */
+@media (max-width: 1180px) {
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .page { padding: 28px 34px 34px; }
+  /* For .drawer, set the declared property, set spacing between children to achieve the intended visual treatment. */
+  .layout { grid-template-columns: 190px minmax(310px, 1fr) minmax(340px, 1fr); gap: 34px; }
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .rail { padding-right: 26px; }
+/* Apply } as part of the .drawer styling. */
+}
+/* Apply the following rules only when (max-width: 980px)  matches. */
+@media (max-width: 980px) {
+  /* For .drawer, set the declared property, set spacing between children to achieve the intended visual treatment. */
+  .layout { grid-template-columns: 1fr 1fr; gap: 40px; }
+  /* For .drawer, set the declared property, set the declared property, define the bottom border, add inner spacing to achieve the intended visual treatment. */
+  .rail { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid var(--border); padding: 0 0 26px; }
+/* Apply } as part of the .drawer styling. */
+}
+/* Apply the following rules only when (max-width: 700px)  matches. */
+@media (max-width: 700px) {
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .page { padding: 24px 20px 30px; }
+  /* For .drawer, set the declared property, set the declared property, set spacing between children to achieve the intended visual treatment. */
+  .masthead { align-items: flex-start; flex-direction: column; gap: 16px; }
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .brand-name { font-size: 2rem; }
+  /* For .drawer, set the declared property, set spacing between children, set the declared property to achieve the intended visual treatment. */
+  .layout { grid-template-columns: 1fr; gap: 40px; padding-top: 30px; }
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .section-head h1, .section-head h2 { font-size: 2.1rem; }
+  /* For .drawer, set the declared property, set the declared property, set spacing between children to achieve the intended visual treatment. */
+  .verdict-head { align-items: flex-start; flex-direction: column; gap: 1.5rem; }
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .score-block { text-align: left; }
+  /* For .drawer, set the declared property to achieve the intended visual treatment. */
+  .drawer { padding: 2rem 1.5rem 3rem; }
+/* Apply } as part of the .drawer styling. */
+}
+/* Apply the following rules only when (prefers-reduced-motion: reduce)  matches. */
+@media (prefers-reduced-motion: reduce) {
+  /* For .drawer, set the declared property, animate property changes, set the declared property to achieve the intended visual treatment. */
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+/* Apply } as part of the .drawer styling. */
+}

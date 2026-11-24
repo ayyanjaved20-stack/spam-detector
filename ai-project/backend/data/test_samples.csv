@@ -1,0 +1,17 @@
+text,label,source
+"Salam! Did you catch the bus? Are you frying an egg? Did you make a tea? Are you eating mom's leftover dinner? Do you feel my love?",ham,sms
+"NayaPay alert: your statement is ready. Rs. 4,250 credited from salary. View the receipt in the portal. No action needed.",ham,sms
+"Aap ko Rs. 50,000 ka inaam mila hai! Winner selected. OTP share karein aur Rs. 3,000 processing fee bhejein: bit.ly/claim-pk",spam,sms
+"NADRA alert: aap ka CNIC block hone wala hai. Confirm karein 03001234567 par call karke.",spam,sms
+"Subject: NayaPay monthly statement - your receipt and transaction are available in the portal. Salary credited on the 28th.",ham,email
+"Subject: Interview confirmed - Bahria University admissions office. Your meeting is confirmed for Monday in auditorium 2.",ham,email
+"Subject: Congratulations lottery jeet gaye - Rs. 25 lakh prize claim ke liye processing fee aur OTP share karein.",spam,email
+"Subject: Account suspended - aap ka bank account verify karein immediately at secure-bank-verify.xyz",spam,email
+"Your parcel tracking shows delivered. Receipt is in the portal. Thanks for shopping with us.",ham,sms
+"University meeting confirmed for tomorrow. Your attendance has been recorded for the conference.",ham,sms
+"You have won USD 1,000! Claim your prize now. Share OTP and pay a small processing fee.",spam,sms
+"Wire transfer pending. Confirm your bank details and share OTP to receive USD 12,500.",spam,sms
+"Subject: Your Amazon receipt - your order has been delivered. Tracking details are in your account. No action needed.",ham,email
+"Subject: Meeting confirmed - the conference call with the admissions team is scheduled for 3 PM. See you there.",ham,email
+"Subject: You have won a prize - claim your USD 5,000 lottery now. Pay a processing fee and click here.",spam,email
+"Subject: Crypto investment - invest in USDT on Binance with guaranteed returns. Send money now to join.",spam,email

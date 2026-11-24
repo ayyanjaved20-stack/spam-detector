@@ -1,0 +1,170 @@
+text,label,source
+"Aap ko Rs. 50,000 ka inaam mila hai. Fee Rs. 3,000 bhejein. Details http://bit.ly/prize-pk",spam,email
+"BISP Ehsaas payment Rs. 12,000 approved. ATM se withdrawal ke liye OTP share karein.",spam,email
+"NADRA alert: Aap ka CNIC block hone wala hai. Confirm karein 0300XXXXXXX par call karke.",spam,email
+"Congratulations! Overseas job Dubai salary 150,000 PKR. Processing fee Rs. 25,000 bhejein.",spam,email
+"JazzCash Cashback offer! Rs. 5,000 milne ke liye apna code share karein.",spam,email
+"Salam, aap ka bank account suspend ho gaya. Verify karein: secure-bank-verify.xyz",spam,email
+"Aap ka number lucky draw mein select hua. Rs. 1 crore jeetne ke liye Rs. 500 send karein.",spam,email
+"FBR tax refund Rs. 85,000 aap ke account mein hai. Claim karne ke liye OTP bhejein.",spam,email
+"Easypaisa wallet verify karwain nahi to band ho jayega. Link: easypaisa-secure-verify.com",spam,email
+"Bhai, mein Dubai se hoon. Investment plan 100 percent return. Rs. 50,000 invest karein.",spam,email
+"PTA alert: Aap ka SIM block hone wala hai. 0300XXXXXXX par call karke confirm karein.",spam,email
+"You have won 2 free Umrah tickets. Pay Rs. 4,500 service charges now.",spam,email
+"Shukriya! Aap ko Rs. 25,000 ka gift card mila hai. Redeem karein: bit.ly/gift-pk",spam,email
+"Bank security alert: your account is locked. Click here: secure-login-update.info",spam,email
+"Eid bonus disbursement pending. Apna CNIC aur OTP share karein jaldi.",spam,email
+"Google reward: Aap Rs. 30,000 jeet chuke hain. Fee Rs. 1,200 bhej kar claim karein.",spam,email
+"Low interest loan approved Rs. 500,000. Processing fee Rs. 15,000 advance bhejein.",spam,email
+"WhatsApp verify: Aap ka number group mein add hua. Confirm karein: wa-verify.xyz",spam,email
+"Zong offer: 10GB free data ke liye apna ATM pin bhejein.",spam,email
+"Salam! Mera beta America mein hai, uska passport pak gaya hai. Fee Rs. 30,000 bhejein.",spam,email
+"Bhai kal 3 baje meeting hai, office mein milte hain.",ham,email
+"Easypaisa: Rs. 2,500 ka transaction Ali ko ho gaya. Txn # 12345.",ham,email
+"NADRA office Monday se Friday 9am-4pm. Original CNIC le kar aayein.",ham,email
+"Assignment deadline Friday tak extend ho gayi. Moodle par submit karein.",ham,email
+"Jazz bill Rs. 1,450 due 25th. JazzCash se payment kar dein.",ham,email
+"Eid Mubarak! Dinner 8 baje. Meethai lana mat bhoolna.",ham,email
+"Salam, aap ka order Amazon se dispatch ho gaya. Tracking: PK123456789.",ham,email
+"Class cancel ho gayi hai. Professor sir ne email bheja hai.",ham,email
+"Zong: Aap ka monthly package 29th ko expire hoga. Recharge kar lena.",ham,email
+"Bank alert: Aap ke account se Rs. 1,200 ka ATM withdrawal hua. Agar aap nahi kiya to 24 hour mein report karein.",ham,email
+"Mohammed sir se milna hai 11 baje library mein.",ham,email
+"Rashan ka order aa gaya hai, door par rakha hai.",ham,email
+"Easypaisa: Aap ka Rs. 500 cashback account mein credit ho gaya hai.",ham,email
+"University fee submission ka last date 30 September hai. Portal par check karein.",ham,email
+"Bhai, bus 7:30 wali pakdi. Station par milte hain.",ham,email
+"Telenor notification: Aap ka data pack 5GB active hai, 15 din baqi.",ham,email
+"Salam, invoice #204 PDF attach hai. Payment terms 30 din hain.",ham,email
+"Dentist appointment Thursday 4 pm. Balance Rs. 3,000.",ham,email
+"CNIC photocopy aur 2 photos Monday tak submit karni hain.",ham,email
+"Aap ka Netflix subscription 15 October ko renew hoga. Rs. 1,199.",ham,email
+"Hi Ayyan! You have used 2 of your 5 failed international transactions limit. Fees will be applicable if the limit is exceeded. You can choose to prepay the fees and reset the counter before reaching the limit. Navigate to the Cards tab on your app and tap Reset. If fees remain unpaid after 5 failed transactions, your card will be blocked and you will need to order a new card after clearing dues. Best, The NayaPay Team",ham,email
+"Your HBL debit card ending 4521 was used for PKR 3,500 at Daraz.pk on 22 Nov. If this was not you, please call 021-111-111-425.",ham,email
+"SadaPay: Your card is now active. You can use it for online and in-store payments worldwide. Manage limits in the app.",ham,email
+"Dear customer, your Meezan Bank account statement for October is ready. Log in to Meezan Mobile Banking to view it.",ham,email
+"Your Careem ride receipt: PKR 450 from Gulshan to DHA. Thank you for riding with Careem.",ham,email
+"Foodpanda: Your order #8842 has been delivered. Rate your experience in the app.",ham,email
+"Daraz: Your package is out for delivery today between 2 PM and 6 PM. Track your order in the app.",ham,email
+"Google: Your password was changed successfully. If you didn't make this change, secure your account at myaccount.google.com.",ham,email
+"Spotify: Your Premium subscription will renew on Dec 1 for Rs. 349. You can manage your plan in account settings.",ham,email
+"LinkedIn: You have 3 new job recommendations based on your profile. View them on LinkedIn.",ham,email
+"Your Jazz monthly package has been renewed. 10GB data, 3000 minutes. Valid for 30 days. Dial *111# for details.",ham,email
+"UBL: Rs. 15,000 has been credited to your account ending 7890. Available balance: Rs. 52,340.",ham,email
+"Dear student, your library book is due on 25 Nov. Please return or renew it to avoid late fees.",ham,email
+"Airblue: Your flight PA-201 Karachi to Lahore on 28 Nov is confirmed. Check-in opens 24 hours before departure.",ham,email
+"Bykea: Your parcel has been picked up and is on the way. Track live in the app.",ham,email
+"Your OTP for login is 482910. It expires in 10 minutes. Do not share this code with anyone.",ham,sms
+"PTCL: Your internet bill of Rs. 2,999 for November is due by 20 Nov. Pay via PTCL app or Easypaisa.",ham,email
+"Standard Chartered: International transaction of USD 12.50 was made on your card ending 8832. Call us if unauthorized.",ham,email
+"Reminder: Your car insurance policy expires on 30 Nov. Renew online at your insurer's website to stay covered.",ham,email
+"Foodpanda: Get 30% off your next order with code SAVE30. Valid until Sunday. Terms apply.",ham,email
+"Daraz 11.11 sale is live! Up to 70% off on electronics and fashion. Shop now in the Daraz app.",ham,email
+"HBL: We noticed unusual activity was attempted but blocked. Your card is safe. No action needed.",ham,email
+"Your Nayapay account KYC is pending. Please complete verification in the app to continue using all features.",ham,email
+"Pakistan Post: Your parcel PK998877 has arrived at the local office. Please collect within 7 days with your CNIC.",ham,email
+"Dear customer, your electricity bill for October is Rs. 8,450. Due date 15 Nov. Pay at any bank or via mobile app.",ham,email
+"Your Uber trip with Ali on Nov 20 was Rs. 680. A receipt has been sent to your email.",ham,email
+"Shadi mubarak! Allah aap dono ko khush rakhe. Reception Friday 8 baje.",ham,sms
+"Team meeting moved to 4 PM today. Zoom link in the calendar invite.",ham,email
+"Student Advisor CS BUIC <sacs.buic@bahria.edu.pk>
+
+Mon, Nov 2, 1:37 PM
+
+Dear Student,
+You have been nominated to attend the MCE Conference on ""Emerging Technologies and Development of National Defense Ecosystem"", scheduled to be held on 04 November 2026, Wednesday at Bahria University Islamabad, Ibn Khaldun Auditorium.
+You are directed to reach the university by 8:15 AM. Your attendance at the conference is mandatory and will be marked in the auditorium.
+All nominated students are required to arrive on time and ensure they are dressed appropriately and presentably.
+Please note that 5 CSP hours will be awarded for attending the conference. You are required to get your attendance marked by the Department Coordinators in the auditorium.",ham,email
+"Dear Student, your class timetable for Spring 2026 has been updated. Please check the student portal for details.",ham,email
+Congratulations! You have been selected for a scholarship interview on Monday at 10 AM at the Financial Aid Office. Please bring your original documents.,ham,email
+Your university fee voucher for Fall semester is now available. Please download it from the student portal and pay before the due date.,ham,email
+Reminder: Faculty meeting tomorrow at 2 PM in Conference Room B. Agenda attached.,ham,email
+"Your Google account security alert: New sign-in from Windows device in Lahore, Pakistan. If this was you, you can ignore this message.",ham,email
+"Microsoft: Your password was changed. If this wasn't you, reset your password immediately from account.microsoft.com.",ham,email
+Your Amazon order #302-1234567 has been shipped. Expected delivery: Nov 25. Track your package in Your Orders.,ham,email
+"JazzCash: Rs. 1,000 received from Ahmed Ali. Your new balance is Rs. 5,430. Txn ID 987654321.",ham,email
+"Easypaisa: You have paid Rs. 2,300 to K-Electric. Transaction successful. Ref: KE123456.",ham,email
+"Dear customer, your Nayatel internet service will undergo scheduled maintenance tonight from 2 AM to 4 AM.",ham,email
+"HBL: Your credit card statement is ready. Total due: Rs. 12,450. Minimum due: Rs. 1,245. Due date: 28 Nov.",ham,email
+"Your Careem Captain is arriving in 3 minutes. White Suzuki Alto, LEA-1234.",ham,sms
+foodpanda: Hungry? Get 25% off on your favorite restaurants today. Use code YUMMY. Order now in the app.,ham,email
+"PIA: Flight PK-300 from Karachi to Islamabad is on time. Departure 09:00, Arrival 11:00. Have a pleasant flight.",ham,email
+"Your appointment at Aga Khan Laboratory is confirmed for Nov 24, 9:00 AM. Please bring your doctor's prescription.",ham,email
+"Dear employee, your salary for November has been credited to your bank account. Payslip is available on the HR portal.",ham,email
+FBR: Your income tax return for tax year 2025 has been successfully filed. Acknowledgment receipt is attached.,ham,email
+NADRA: Your CNIC renewal application has been received. You can track your application status at id.nadra.gov.pk.,ham,email
+Your Daraz wallet has been credited with Rs. 500 refund for order #12345. It will reflect within 24 hours.,ham,email
+"Bahria University: Midterm exams will commence from Dec 1, 2026. Date sheet is available on the LMS.",ham,email
+Reminder: Your vehicle token tax is due. Please visit the Excise and Taxation office or pay online.,ham,email
+Congratulations on completing your course! Your certificate is now available to download.,ham,email
+Your package from TCS is out for delivery. Rider will contact you shortly. Tracking: 1234567890.,ham,email
+"Meezan Bank: Rs. 50,000 transferred to your account from ABC Company. Balance: Rs. 150,000.",ham,email
+"Subject: NayaPay transaction receipt - PKR 2,150 paid to Daraz at 14:32. Receipt attached. No action needed.",ham,email
+"Subject: Easypaisa wallet alert - Rs. 780 cashback credited today. Check your transaction history in the app.",ham,email
+"Subject: HBL account update - your October statement is ready. Log in to view your statement and download the PDF.",ham,email
+"Subject: UBL salary credit - PKR 68,000 credited from ABC Pvt Ltd. Your available balance is PKR 112,450.",ham,email
+"Subject: JazzCash bill payment - Rs. 3,420 paid to K-Electric. Transaction reference KE-88213. Thank you.",ham,email
+"Subject: NADRA tracking update - your CNIC renewal application has been printed and is ready for collection.",ham,email
+"Subject: FBR acknowledgment - your tax return for year 2025 has been received. Reference number 88213.",ham,email
+"Subject: Bahria University LMS - assignment submission for CS-301 is now open. Deadline is Friday 11:59 PM.",ham,email
+"Subject: PTCL bill - your November internet bill of Rs. 2,999 is due on 20 Nov. Pay via the PTCL app.",ham,email
+"Subject: TCS delivery update - your parcel 774412 is out for delivery. Rider will contact you shortly.",ham,email
+"Subject: PIA booking confirmed - flight PK-505 Islamabad to Karachi on 02 Dec, 09:15 AM. Check-in opens 24 hours prior.",ham,email
+"Subject: Careem receipt - your ride from Gulshan to DHA cost PKR 520. Receipt is attached.",ham,email
+"Subject: Meezan Bank alert - international transaction of USD 18.40 was approved on your card ending 9012.",ham,email
+"Subject: SadaPay card - your virtual card has been created. Manage limits in the app. Do not share your card number.",ham,email
+"Subject: Google security - new sign-in from Chrome in Lahore. If this was you, no action is needed.",ham,email
+"Subject: Microsoft 365 renewal - your subscription renews on 12 Dec for Rs. 1,800. Manage billing in account settings.",ham,email
+"Subject: Aga Khan appointment - your lab test is confirmed for 24 Nov at 9:00 AM. Bring your prescription.",ham,email
+"Subject: HR portal - November payslip is available. Your salary was credited to your bank account.",ham,email
+"Subject: Your verification code - your NayaPay login OTP is 482910. It expires in 10 minutes. Never share this code with anyone.",ham,email
+"Subject: Easypaisa security - we will never ask for your OTP, PIN or CNIC by email. Ignore anyone who does.",ham,email
+"Subject: Amazon receipt - your order 114-882 has been delivered. Tracking details are in your account.",ham,email
+"Subject: Conference confirmation - your registration for the 2026 developers conference is confirmed. Badge will be emailed.",ham,email
+"Subject: Wire transfer pending - confirm your bank details and share the OTP to receive USD 12,500 within 24 hours.",spam,email
+"Subject: International payment - your USD 9,800 transfer is on hold. Verify account and share OTP to release funds.",spam,email
+"Subject: Crypto opportunity - invest USDT on Binance with guaranteed 30 percent returns. Send money now to join.",spam,email
+"Subject: USDT reward - your wallet qualifies for a 20 percent bonus. Transfer funds to the provided address to claim.",spam,email
+"Subject: Secure verification - your account will be closed unless you confirm your password and share the OTP sent to your phone.",spam,email
+"Subject: Bank detail update - reply with your account number, CNIC and OTP to avoid service interruption.",spam,email
+"Subject: Salary hold - your November salary is pending verification. Send processing fee Rs. 8,000 to release it.",spam,email
+"Subject: Refund approved - claim your Rs. 18,500 refund by sharing OTP and paying a small processing fee.",spam,email
+"Subject: Delivery failed - your parcel could not be delivered. Pay Rs. 350 redelivery fee and share OTP to reschedule.",spam,email
+"Subject: Lottery claim - Rs. 45 lakh prize approved. Pay Rs. 6,000 processing fee and share CNIC to claim.",spam,email
+"Subject: Job offer - overseas client needs your bank details and OTP for contract verification. Reply urgently.",spam,email
+"Subject: Tax refund - FBR has approved Rs. 72,000 refund. Share OTP to process the payment.",spam,email
+"Subject: Account limited - verify your identity with OTP and card number to restore full access.",spam,email
+"Subject: Investment plan - guaranteed monthly income. Invest Rs. 100,000 in USDT and share OTP to activate.",spam,email
+"Subject: Urgent wire - beneficiary details need confirmation. Reply with OTP and bank account to receive USD 6,200.",spam,email
+"Subject: Prize notification - you are a winner. Pay processing fee and click here to claim now.",spam,email
+"Subject: Your receipt from Apple - your payment of $9.99 for iCloud storage has been received. Receipt attached.",ham,email
+"Subject: Adobe subscription - your Creative Cloud plan renews on 15 Dec. Manage billing in your account.",ham,email
+"Subject: GitHub security - a new SSH key was added to your account. If this was you, no action needed.",ham,email
+"Subject: LinkedIn notification - your profile appeared in 12 searches this week. View analytics in your account.",ham,email
+"Subject: Netflix payment - your Standard plan renewed successfully for $15.49. No action required.",ham,email
+"Subject: Spotify receipt - your Premium subscription payment was successful. Download the invoice in settings.",ham,email
+"Subject: Amazon shipping update - order 112-3388120 has shipped. Expected delivery Thursday.",ham,email
+"Subject: UPS delivery - tracking 1Z999AA10123456784 is out for delivery. Driver will arrive before 6 PM.",ham,email
+"Subject: DHL parcel - your shipment 4829107755 is being processed at the local facility.",ham,email
+"Subject: Delta booking confirmation - flight DL 482 from NYC to LAX on 12 Dec, 8:30 AM. Confirmation 7XK9P2.",ham,email
+"Subject: Hilton reservation - your stay at Hilton Garden Inn is confirmed for 18-20 Dec. Confirmation 55213.",ham,email
+"Subject: Interview invite - your interview with Acme Corp is confirmed for Tuesday at 10 AM via video call.",ham,email
+"Subject: Payroll - your November salary has been deposited. Payslip is available in the employee portal.",ham,email
+"Subject: Bank of America statement - your November statement is ready. Sign in to online banking to view it.",ham,email
+"Subject: Chase card alert - a $24.80 charge at Starbucks was approved on your card ending 4412.",ham,email
+"Subject: IRS notice - your tax transcript request has been processed. Reference number 88213.",ham,email
+"Subject: Prescription ready - your medication is ready for pickup at CVS Pharmacy after 4 PM.",ham,email
+"Subject: Utility bill - your November electricity bill of $86.40 is available. Due date 20 Dec. Pay online.",ham,email
+"Subject: Account suspended - your Netflix account will be closed. Update payment details here: bit.ly/verify-pay",spam,email
+"Subject: Unusual sign-in - we detected a login from Moscow. Confirm your password and OTP at secure-account-check.info",spam,email
+"Subject: Your package is stuck - pay $2.99 redelivery fee and confirm your address at parcel-track-now.xyz",spam,email
+"Subject: Lottery winner - you have won $2,500,000. Pay a processing fee of $450 to claim your prize.",spam,email
+"Subject: Wire transfer pending - confirm beneficiary details and share the OTP to receive $18,000.",spam,email
+"Subject: Crypto bonus - invest in BTC now and get 40 percent guaranteed returns. Send funds to activate.",spam,email
+"Subject: Gift card reward - claim your $100 Amazon gift card. Enter your card details and OTP to verify.",spam,email
+"Subject: Invoice overdue - attached invoice requires immediate payment. Reply with bank details to avoid penalties.",spam,email
+"Subject: Tax refund - the IRS has approved a $3,200 refund. Share your OTP to process the payment.",spam,email
+"Subject: Job offer - remote position, $5,000 monthly. Send your bank details and OTP for onboarding.",spam,email
+"Subject: Password reset requested - if you did not request this, call the number in the attachment and share OTP.",spam,email
+"Subject: Subscription expired - your office license expired. Renew now by sending payment to the provided account.",spam,email

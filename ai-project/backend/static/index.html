@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Rajput Spam Detector — Threat Classification</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="grain">
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="Rajput Spam Detector home">
+        <!-- Replace /static/logo.svg with your SVG to change the mark everywhere. -->
+        <img class="logo-mark" src="/static/logo.svg" alt="" width="64" height="64">
+        <span class="brand-text">
+          <span class="brand-name">RAJPUT <em>SPAM DETECTOR</em></span>
+        </span>
+      </a>
+      <div class="masthead-actions">
+        <button type="button" id="aboutBtn" class="text-button" aria-haspopup="dialog" aria-label="Open model information">
+          MODEL INFO <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="rail" aria-label="Model status">
+        <div class="metric-list">
+          <div class="metric-row"><span class="micro-label">STATUS</span><span id="mStatus" class="metric-value">…</span></div>
+          <div class="metric-row"><span class="micro-label">ACCURACY</span><span id="mAccuracy" class="metric-value">…</span></div>
+          <div class="metric-row"><span class="micro-label">SPAM F1</span><span id="mF1" class="metric-value">…</span></div>
+          <div class="metric-row"><span class="micro-label">ROWS</span><span id="mRows" class="metric-value">…</span></div>
+          <div class="metric-row"><span class="micro-label">SOURCES</span><span id="mSources" class="metric-value">…</span></div>
+          <div class="metric-row"><span class="micro-label">MODE</span><span class="metric-value">LOCAL / OFFLINE</span></div>
+        </div>
+      </aside>
+
+      <section class="input-column" aria-labelledby="input-title">
+        <div class="section-head">
+          <h1 id="input-title">Paste a message.</h1>
+        </div>
+        <p class="section-lede">SMS or email — analysed locally. Nothing leaves this machine.</p>
+
+        <div class="tabs" role="group" aria-label="Message type">
+          <button type="button" class="tab active" data-source="sms" aria-pressed="true">SMS</button>
+          <button type="button" class="tab" data-source="email" aria-pressed="false">EMAIL</button>
+        </div>
+
+        <label class="sr-only" for="message">Message payload</label>
+        <div class="textarea-wrap" id="textareaWrap">
+          <textarea id="message" rows="10" placeholder="Paste an SMS here…"></textarea>
+          <div class="drop-hint" aria-hidden="true">DROP .TXT OR .EML TO LOAD</div>
+        </div>
+
+        <div class="input-meta">
+          <span id="charCount">0 CHARACTERS</span>
+          <button type="button" id="clearBtn" class="tiny-button">CLEAR</button>
+        </div>
+
+        <button type="button" id="analyzeBtn" class="scan-button">
+          <span class="scan-label">RUN SCAN</span>
+          <span class="scan-arrow" aria-hidden="true">↗</span>
+        </button>
+
+        <p id="error" class="error" role="alert" hidden></p>
+        <p class="input-footnote">CTRL + ENTER TO SCAN · DECISION SUPPORT, NOT A GUARANTEE</p>
+      </section>
+
+      <section class="result-column" aria-labelledby="result-title">
+        <div class="section-head">
+          <h2 id="result-title">Analysis.</h2>
+        </div>
+
+        <div id="empty" class="empty-state">
+          <div class="empty-glyph" aria-hidden="true">○</div>
+          <p class="empty-title">AWAITING PAYLOAD</p>
+          <p class="empty-sub">Run a scan to see the verdict, the score, and the terms that moved the model.</p>
+        </div>
+
+        <div id="scanning" class="scanning" hidden aria-live="polite">
+          <div class="scan-step" data-step="1">01 &nbsp; EXTRACTING TEXT</div>
+          <div class="scan-step" data-step="2">02 &nbsp; BUILDING TF-IDF VECTOR</div>
+          <div class="scan-step" data-step="3">03 &nbsp; CLASSIFYING</div>
+        </div>
+
+        <div id="result" class="result" hidden aria-live="polite">
+          <div class="verdict-head">
+            <div>
+              <span class="micro-label">CLASSIFICATION</span>
+              <div id="verdict" class="verdict">HAM</div>
+            </div>
+            <div class="score-block">
+              <span class="micro-label">SPAM PROBABILITY</span>
+              <div id="probability" class="score">0%</div>
+            </div>
+          </div>
+
+          <div class="meter-block">
+            <div class="meter-head">
+              <span>DECISION SCALE</span>
+              <span id="confidenceValue">CONFIDENCE —</span>
+            </div>
+            <div id="meter" class="meter" role="img" aria-label="Spam probability">
+              <div id="meterDanger" class="meter-danger" aria-hidden="true"></div>
+              <div id="confidenceBar" class="meter-fill" aria-hidden="true"></div>
+              <div id="thresholdMarker" class="meter-threshold" aria-hidden="true">
+                <span id="thresholdLabel">T 0.60</span>
+              </div>
+            </div>
+            <div class="meter-scale" aria-hidden="true">
+              <span>HAM · 0.00</span><span>0.50</span><span>1.00 · SPAM</span>
+            </div>
+          </div>
+
+          <div class="signals">
+            <div class="signals-head">
+              <h3>MODEL SIGNALS</h3>
+              <span id="signalCount">0 TERMS</span>
+            </div>
+            <div id="chips" class="chips"></div>
+            <p id="noSignals" class="rail-muted" hidden>No strong model signals detected.</p>
+          </div>
+
+          <p id="tip" class="tip"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="history-footer" aria-label="Recent scans">
+      <div class="rail-head">
+        <h2 class="rail-title">RECENT SCANS</h2>
+        <button type="button" id="clearHistory" class="tiny-button">PURGE</button>
+      </div>
+      <ul id="historyList" class="history-list"></ul>
+      <p id="historyEmpty" class="rail-muted">No scans logged.</p>
+    </footer>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer-head">
+      <div>
+        <h2 id="drawerTitle">System overview.</h2>
+      </div>
+      <button type="button" id="drawerClose" class="drawer-close" aria-label="Close model information">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <section class="drawer-section">
+        <h3>PIPELINE</h3>
+        <ol class="pipeline">
+          <li><span>01</span><div><strong>INGEST</strong><p>SMS or pasted email, cleaned locally.</p></div></li>
+          <li><span>02</span><div><strong>TF-IDF</strong><p>1–2 gram word features, sublinear weighting.</p></div></li>
+          <li><span>03</span><div><strong>LOGISTIC REGRESSION</strong><p>Supervised classifier with class weighting.</p></div></li>
+          <li><span>04</span><div><strong>DECISION</strong><p id="drawerThreshold">Threshold 0.60 + explainable ham-cue guardrail.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="drawer-section">
+        <h3>CONFUSION MATRIX <small>HELD-OUT TEST SET</small></h3>
+        <div id="matrix" class="matrix"></div>
+      </section>
+
+      <section class="drawer-section">
+        <h3>PER-SOURCE ACCURACY</h3>
+        <div id="sourceBars" class="source-bars"></div>
+      </section>
+
+      <section class="drawer-section">
+        <h3>TRAINING DATA</h3>
+        <ul class="sources-list">
+          <li>Pakistan SMS — Muhafiz-AI, MIT</li>
+          <li>Roman Urdu phishing — Zenodo, CC BY 4.0 <span>DOI 10.5281/zenodo.21810885</span></li>
+          <li>Enron-Spam — GPL-3.0, 2,000 sampled emails</li>
+          <li>Local hand-curated hard negatives — project-authored</li>
+        </ul>
+        <p class="drawer-note">Template overlap in the Roman Urdu set and domain shift in Enron email remain known limitations. The conservative threshold favours fewer false positives on legitimate notifications.</p>
+      </section>
+    </div>
+  </aside>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

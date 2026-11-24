@@ -1,0 +1,370 @@
+<!-- Declare HTML5 standards mode for consistent browser parsing. -->
+<!DOCTYPE html>
+<!-- Open the html element to build the page structure. -->
+<html lang="en">
+<!-- Open the head element to build the page structure. -->
+<head>
+  <!-- Open the meta element to build the page structure. -->
+  <meta charset="utf-8">
+  <!-- Open the meta element to build the page structure. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open the meta element to build the page structure. -->
+  <meta name="color-scheme" content="light">
+  <!-- Open the title>Rajput element to build the page structure. -->
+  <title>Rajput Spam Detector — Threat Classification</title>
+  <!-- Open the link element to build the page structure. -->
+  <link rel="stylesheet" href="/static/style.css">
+<!-- Close the head element opened above. -->
+</head>
+<!-- Open the body element to build the page structure. -->
+<body class="grain">
+  <!-- Open the div element to build the page structure. -->
+  <div class="page">
+    <!-- Open the header element to build the page structure. -->
+    <header class="masthead">
+      <!-- Open the a element to build the page structure. -->
+      <a class="brand" href="/" aria-label="Rajput Spam Detector home">
+        <!-- Keep the existing author note that documents this asset. -->
+        <!-- Replace /static/logo.svg with your SVG to change the mark everywhere. -->
+        <!-- Open the img element to build the page structure. -->
+        <img class="logo-mark" src="/static/logo.svg" alt="" width="64" height="64">
+        <!-- Open the span element to build the page structure. -->
+        <span class="brand-text">
+          <!-- Open the span element to build the page structure. -->
+          <span class="brand-name">RAJPUT <em>SPAM DETECTOR</em></span>
+        <!-- Close the span element opened above. -->
+        </span>
+      <!-- Close the a element opened above. -->
+      </a>
+      <!-- Open the div element to build the page structure. -->
+      <div class="masthead-actions">
+        <!-- Open the button element with id aboutBtn to build the page structure. -->
+        <button type="button" id="aboutBtn" class="text-button" aria-haspopup="dialog" aria-label="Open model information">
+          <!-- Show MODEL INFO <span aria-hidden="true">↗</span> as visible content in the interface. -->
+          MODEL INFO <span aria-hidden="true">↗</span>
+        <!-- Close the button element opened above. -->
+        </button>
+      <!-- Close the div element opened above. -->
+      </div>
+    <!-- Close the header element opened above. -->
+    </header>
+<!-- (blank line separates logical blocks) -->
+
+    <!-- Open the main element to build the page structure. -->
+    <main class="layout">
+      <!-- Open the aside element to build the page structure. -->
+      <aside class="rail" aria-label="Model status">
+        <!-- Open the div element to build the page structure. -->
+        <div class="metric-list">
+          <!-- Open the div element with id mStatus to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">STATUS</span><span id="mStatus" class="metric-value">…</span></div>
+          <!-- Open the div element with id mAccuracy to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">ACCURACY</span><span id="mAccuracy" class="metric-value">…</span></div>
+          <!-- Open the div element with id mF1 to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">SPAM F1</span><span id="mF1" class="metric-value">…</span></div>
+          <!-- Open the div element with id mRows to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">ROWS</span><span id="mRows" class="metric-value">…</span></div>
+          <!-- Open the div element with id mSources to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">SOURCES</span><span id="mSources" class="metric-value">…</span></div>
+          <!-- Open the div element to build the page structure. -->
+          <div class="metric-row"><span class="micro-label">MODE</span><span class="metric-value">LOCAL / OFFLINE</span></div>
+        <!-- Close the div element opened above. -->
+        </div>
+      <!-- Close the aside element opened above. -->
+      </aside>
+<!-- (blank line separates logical blocks) -->
+
+      <!-- Open the section element to build the page structure. -->
+      <section class="input-column" aria-labelledby="input-title">
+        <!-- Open the div element to build the page structure. -->
+        <div class="section-head">
+          <!-- Open the h1 element with id input-title to build the page structure. -->
+          <h1 id="input-title">Paste a message.</h1>
+        <!-- Close the div element opened above. -->
+        </div>
+        <!-- Open the p element to build the page structure. -->
+        <p class="section-lede">SMS or email — analysed locally. Nothing leaves this machine.</p>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the div element to build the page structure. -->
+        <div class="tabs" role="group" aria-label="Message type">
+          <!-- Open the button element to build the page structure. -->
+          <button type="button" class="tab active" data-source="sms" aria-pressed="true">SMS</button>
+          <!-- Open the button element to build the page structure. -->
+          <button type="button" class="tab" data-source="email" aria-pressed="false">EMAIL</button>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the label element to build the page structure. -->
+        <label class="sr-only" for="message">Message payload</label>
+        <!-- Open the div element with id textareaWrap to build the page structure. -->
+        <div class="textarea-wrap" id="textareaWrap">
+          <!-- Open the textarea element with id message to build the page structure. -->
+          <textarea id="message" rows="10" placeholder="Paste an SMS here…"></textarea>
+          <!-- Open the div element to build the page structure. -->
+          <div class="drop-hint" aria-hidden="true">DROP .TXT OR .EML TO LOAD</div>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the div element to build the page structure. -->
+        <div class="input-meta">
+          <!-- Open the span element with id charCount to build the page structure. -->
+          <span id="charCount">0 CHARACTERS</span>
+          <!-- Open the button element with id clearBtn to build the page structure. -->
+          <button type="button" id="clearBtn" class="tiny-button">CLEAR</button>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the button element with id analyzeBtn to build the page structure. -->
+        <button type="button" id="analyzeBtn" class="scan-button">
+          <!-- Open the span element to build the page structure. -->
+          <span class="scan-label">RUN SCAN</span>
+          <!-- Open the span element to build the page structure. -->
+          <span class="scan-arrow" aria-hidden="true">↗</span>
+        <!-- Close the button element opened above. -->
+        </button>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the p element with id error to build the page structure. -->
+        <p id="error" class="error" role="alert" hidden></p>
+        <!-- Open the p element to build the page structure. -->
+        <p class="input-footnote">CTRL + ENTER TO SCAN · DECISION SUPPORT, NOT A GUARANTEE</p>
+      <!-- Close the section element opened above. -->
+      </section>
+<!-- (blank line separates logical blocks) -->
+
+      <!-- Open the section element to build the page structure. -->
+      <section class="result-column" aria-labelledby="result-title">
+        <!-- Open the div element to build the page structure. -->
+        <div class="section-head">
+          <!-- Open the h2 element with id result-title to build the page structure. -->
+          <h2 id="result-title">Analysis.</h2>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the div element with id empty to build the page structure. -->
+        <div id="empty" class="empty-state">
+          <!-- Open the div element to build the page structure. -->
+          <div class="empty-glyph" aria-hidden="true">○</div>
+          <!-- Open the p element to build the page structure. -->
+          <p class="empty-title">AWAITING PAYLOAD</p>
+          <!-- Open the p element to build the page structure. -->
+          <p class="empty-sub">Run a scan to see the verdict, the score, and the terms that moved the model.</p>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the div element with id scanning to build the page structure. -->
+        <div id="scanning" class="scanning" hidden aria-live="polite">
+          <!-- Open the div element to build the page structure. -->
+          <div class="scan-step" data-step="1">01 &nbsp; EXTRACTING TEXT</div>
+          <!-- Open the div element to build the page structure. -->
+          <div class="scan-step" data-step="2">02 &nbsp; BUILDING TF-IDF VECTOR</div>
+          <!-- Open the div element to build the page structure. -->
+          <div class="scan-step" data-step="3">03 &nbsp; CLASSIFYING</div>
+        <!-- Close the div element opened above. -->
+        </div>
+<!-- (blank line separates logical blocks) -->
+
+        <!-- Open the div element with id result to build the page structure. -->
+        <div id="result" class="result" hidden aria-live="polite">
+          <!-- Open the div element to build the page structure. -->
+          <div class="verdict-head">
+            <!-- Open the div element to build the page structure. -->
+            <div>
+              <!-- Open the span element to build the page structure. -->
+              <span class="micro-label">CLASSIFICATION</span>
+              <!-- Open the div element with id verdict to build the page structure. -->
+              <div id="verdict" class="verdict">HAM</div>
+            <!-- Close the div element opened above. -->
+            </div>
+            <!-- Open the div element to build the page structure. -->
+            <div class="score-block">
+              <!-- Open the span element to build the page structure. -->
+              <span class="micro-label">SPAM PROBABILITY</span>
+              <!-- Open the div element with id probability to build the page structure. -->
+              <div id="probability" class="score">0%</div>
+            <!-- Close the div element opened above. -->
+            </div>
+          <!-- Close the div element opened above. -->
+          </div>
+<!-- (blank line separates logical blocks) -->
+
+          <!-- Open the div element to build the page structure. -->
+          <div class="meter-block">
+            <!-- Open the div element to build the page structure. -->
+            <div class="meter-head">
+              <!-- Open the span>DECISION element to build the page structure. -->
+              <span>DECISION SCALE</span>
+              <!-- Open the span element with id confidenceValue to build the page structure. -->
+              <span id="confidenceValue">CONFIDENCE —</span>
+            <!-- Close the div element opened above. -->
+            </div>
+            <!-- Open the div element with id meter to build the page structure. -->
+            <div id="meter" class="meter" role="img" aria-label="Spam probability">
+              <!-- Open the div element with id meterDanger to build the page structure. -->
+              <div id="meterDanger" class="meter-danger" aria-hidden="true"></div>
+              <!-- Open the div element with id confidenceBar to build the page structure. -->
+              <div id="confidenceBar" class="meter-fill" aria-hidden="true"></div>
+              <!-- Open the div element with id thresholdMarker to build the page structure. -->
+              <div id="thresholdMarker" class="meter-threshold" aria-hidden="true">
+                <!-- Open the span element with id thresholdLabel to build the page structure. -->
+                <span id="thresholdLabel">T 0.60</span>
+              <!-- Close the div element opened above. -->
+              </div>
+            <!-- Close the div element opened above. -->
+            </div>
+            <!-- Open the div element to build the page structure. -->
+            <div class="meter-scale" aria-hidden="true">
+              <!-- Open the span>HAM element to build the page structure. -->
+              <span>HAM · 0.00</span><span>0.50</span><span>1.00 · SPAM</span>
+            <!-- Close the div element opened above. -->
+            </div>
+          <!-- Close the div element opened above. -->
+          </div>
+<!-- (blank line separates logical blocks) -->
+
+          <!-- Open the div element to build the page structure. -->
+          <div class="signals">
+            <!-- Open the div element to build the page structure. -->
+            <div class="signals-head">
+              <!-- Open the h3>MODEL element to build the page structure. -->
+              <h3>MODEL SIGNALS</h3>
+              <!-- Open the span element with id signalCount to build the page structure. -->
+              <span id="signalCount">0 TERMS</span>
+            <!-- Close the div element opened above. -->
+            </div>
+            <!-- Open the div element with id chips to build the page structure. -->
+            <div id="chips" class="chips"></div>
+            <!-- Open the p element with id noSignals to build the page structure. -->
+            <p id="noSignals" class="rail-muted" hidden>No strong model signals detected.</p>
+          <!-- Close the div element opened above. -->
+          </div>
+<!-- (blank line separates logical blocks) -->
+
+          <!-- Open the p element with id tip to build the page structure. -->
+          <p id="tip" class="tip"></p>
+        <!-- Close the div element opened above. -->
+        </div>
+      <!-- Close the section element opened above. -->
+      </section>
+    <!-- Close the main element opened above. -->
+    </main>
+<!-- (blank line separates logical blocks) -->
+
+    <!-- Open the footer element to build the page structure. -->
+    <footer class="history-footer" aria-label="Recent scans">
+      <!-- Open the div element to build the page structure. -->
+      <div class="rail-head">
+        <!-- Open the h2 element to build the page structure. -->
+        <h2 class="rail-title">RECENT SCANS</h2>
+        <!-- Open the button element with id clearHistory to build the page structure. -->
+        <button type="button" id="clearHistory" class="tiny-button">PURGE</button>
+      <!-- Close the div element opened above. -->
+      </div>
+      <!-- Open the ul element with id historyList to build the page structure. -->
+      <ul id="historyList" class="history-list"></ul>
+      <!-- Open the p element with id historyEmpty to build the page structure. -->
+      <p id="historyEmpty" class="rail-muted">No scans logged.</p>
+    <!-- Close the footer element opened above. -->
+    </footer>
+  <!-- Close the div element opened above. -->
+  </div>
+<!-- (blank line separates logical blocks) -->
+
+  <!-- Open the div element with id drawerBackdrop to build the page structure. -->
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <!-- Open the aside element with id drawer to build the page structure. -->
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <!-- Open the div element to build the page structure. -->
+    <div class="drawer-head">
+      <!-- Open the div element to build the page structure. -->
+      <div>
+        <!-- Open the h2 element with id drawerTitle to build the page structure. -->
+        <h2 id="drawerTitle">System overview.</h2>
+      <!-- Close the div element opened above. -->
+      </div>
+      <!-- Open the button element with id drawerClose to build the page structure. -->
+      <button type="button" id="drawerClose" class="drawer-close" aria-label="Close model information">×</button>
+    <!-- Close the div element opened above. -->
+    </div>
+<!-- (blank line separates logical blocks) -->
+
+    <!-- Open the div element to build the page structure. -->
+    <div class="drawer-body">
+      <!-- Open the section element to build the page structure. -->
+      <section class="drawer-section">
+        <!-- Open the h3>PIPELINE</h3 element to build the page structure. -->
+        <h3>PIPELINE</h3>
+        <!-- Open the ol element to build the page structure. -->
+        <ol class="pipeline">
+          <!-- Open the li><span>01</span><div><strong>INGEST</strong><p>SMS element to build the page structure. -->
+          <li><span>01</span><div><strong>INGEST</strong><p>SMS or pasted email, cleaned locally.</p></div></li>
+          <!-- Open the li><span>02</span><div><strong>TF-IDF</strong><p>1–2 element to build the page structure. -->
+          <li><span>02</span><div><strong>TF-IDF</strong><p>1–2 gram word features, sublinear weighting.</p></div></li>
+          <!-- Open the li><span>03</span><div><strong>LOGISTIC element to build the page structure. -->
+          <li><span>03</span><div><strong>LOGISTIC REGRESSION</strong><p>Supervised classifier with class weighting.</p></div></li>
+          <!-- Open the li><span>04</span><div><strong>DECISION</strong><p element with id drawerThreshold to build the page structure. -->
+          <li><span>04</span><div><strong>DECISION</strong><p id="drawerThreshold">Threshold 0.60 + explainable ham-cue guardrail.</p></div></li>
+        <!-- Close the ol element opened above. -->
+        </ol>
+      <!-- Close the section element opened above. -->
+      </section>
+<!-- (blank line separates logical blocks) -->
+
+      <!-- Open the section element to build the page structure. -->
+      <section class="drawer-section">
+        <!-- Open the h3>CONFUSION element to build the page structure. -->
+        <h3>CONFUSION MATRIX <small>HELD-OUT TEST SET</small></h3>
+        <!-- Open the div element with id matrix to build the page structure. -->
+        <div id="matrix" class="matrix"></div>
+      <!-- Close the section element opened above. -->
+      </section>
+<!-- (blank line separates logical blocks) -->
+
+      <!-- Open the section element to build the page structure. -->
+      <section class="drawer-section">
+        <!-- Open the h3>PER-SOURCE element to build the page structure. -->
+        <h3>PER-SOURCE ACCURACY</h3>
+        <!-- Open the div element with id sourceBars to build the page structure. -->
+        <div id="sourceBars" class="source-bars"></div>
+      <!-- Close the section element opened above. -->
+      </section>
+<!-- (blank line separates logical blocks) -->
+
+      <!-- Open the section element to build the page structure. -->
+      <section class="drawer-section">
+        <!-- Open the h3>TRAINING element to build the page structure. -->
+        <h3>TRAINING DATA</h3>
+        <!-- Open the ul element to build the page structure. -->
+        <ul class="sources-list">
+          <!-- Open the li>Pakistan element to build the page structure. -->
+          <li>Pakistan SMS — Muhafiz-AI, MIT</li>
+          <!-- Open the li>Roman element to build the page structure. -->
+          <li>Roman Urdu phishing — Zenodo, CC BY 4.0 <span>DOI 10.5281/zenodo.21810885</span></li>
+          <!-- Open the li>Enron-Spam element to build the page structure. -->
+          <li>Enron-Spam — GPL-3.0, 2,000 sampled emails</li>
+          <!-- Open the li>Local element to build the page structure. -->
+          <li>Local hand-curated hard negatives — project-authored</li>
+        <!-- Close the ul element opened above. -->
+        </ul>
+        <!-- Open the p element to build the page structure. -->
+        <p class="drawer-note">Template overlap in the Roman Urdu set and domain shift in Enron email remain known limitations. The conservative threshold favours fewer false positives on legitimate notifications.</p>
+      <!-- Close the section element opened above. -->
+      </section>
+    <!-- Close the div element opened above. -->
+    </div>
+  <!-- Close the aside element opened above. -->
+  </aside>
+<!-- (blank line separates logical blocks) -->
+
+  <!-- Open the script element to build the page structure. -->
+  <script src="/static/app.js"></script>
+<!-- Close the body element opened above. -->
+</body>
+<!-- Close the html element opened above. -->
+</html>

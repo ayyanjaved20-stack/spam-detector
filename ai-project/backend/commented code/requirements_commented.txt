@@ -1,0 +1,16 @@
+# FastAPI provides the HTTP routing and request validation used by the backend.
+fastapi>=0.110
+# Uvicorn is the ASGI server that actually serves the app, with standard extras.
+uvicorn[standard]>=0.27
+# Pydantic defines and validates the JSON request body model in main.py.
+pydantic>=2.5
+# scikit-learn supplies TF-IDF vectorising, logistic regression and metrics.
+scikit-learn>=1.3
+# pandas reads the Excel and CSV training datasets into data frames.
+pandas>=2.0
+# openpyxl is the Excel reader pandas needs for the .xlsx source files.
+openpyxl>=3.1
+# joblib saves the trained pipeline to disk and loads it back for inference.
+joblib>=1.3
+# numpy is the numerical array base used internally by scikit-learn and pandas.
+numpy>=1.24
